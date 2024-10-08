@@ -1,25 +1,22 @@
+import { Link } from "react-router-dom";
 import "../style.css";
 
-const Header = () => {
+
+const Header = ({cart, setCart}) => {
 
     return(
         <div className="menu">
-            <a href="">Logo</a>
-            <ul className="menu-items">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/about">About</a>
-                </li>
-                <li>
-                    <a href="/contact">Contact</a>
-                </li>
-                <li>
-                    <a href="/cart">Cart</a>
-                </li>
-            </ul>
-            <a href="">5</a>
+
+            <div className="menu-items">
+                 <Link to="/">Reactify</Link>
+                 <Link to="/">Home</Link>
+                 <Link to="/about">About</Link>
+                 <Link to="/contact">Contact</Link>
+                 <Link to="/cart">Cart</Link>
+            </div>
+                   <Link to="/cart">{cart}</Link>
+        
+
         </div> 
     )
 }
