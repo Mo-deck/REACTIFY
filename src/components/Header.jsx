@@ -16,8 +16,6 @@ const Header = ({cart, setCart}) => {
                 <Link to="/cart" >
                 <span className="cart">{cart}</span>
                 </Link>
-        
-
         </div> 
     )
 }

@@ -1,5 +1,7 @@
+import Products from "../components/Products"
+
 const Home =() =>{
-    return<h1>This is Home Page....</h1>
+    return <Products />
 }
 
 export default Home
