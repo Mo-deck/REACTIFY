@@ -12,7 +12,7 @@ const App = () => {
    const [cart,setCart] = useState(5)
 
     return(
-       <div>
+       <div className="container">
           <Header cart={cart} setCart={setCart} />
               <Routes>
               <Route path="/" element={<Home />} />

@@ -6,15 +6,16 @@ const Header = ({cart, setCart}) => {
 
     return(
         <div className="menu">
-
-            <div className="menu-items">
-                 <Link to="/">Reactify</Link>
+                 <Link to="/" className="logo">Reactify</Link>
+            <div className="links">
                  <Link to="/">Home</Link>
                  <Link to="/about">About</Link>
                  <Link to="/contact">Contact</Link>
                  <Link to="/cart">Cart</Link>
             </div>
-                   <Link to="/cart">{cart}</Link>
+                <Link to="/cart" >
+                <span className="cart">{cart}</span>
+                </Link>
         
 
         </div> 
