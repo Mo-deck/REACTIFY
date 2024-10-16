@@ -11,7 +11,7 @@ const Product =({ product })=>{
     >   
         <div className="info">
             <span>{product.name}</span>
-            <span>{product.price}</span>
+            <span>${product.price}</span>
         </div>
         <button className="btn btn-primary">+</button>
     </div>    
