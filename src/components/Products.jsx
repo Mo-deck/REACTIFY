@@ -1,3 +1,5 @@
+import Product from "./Product";
+
 const products = [
     {
         id:1,
@@ -32,13 +34,21 @@ const products = [
     {
         id:6,
         name: "cool drink",
-        urlImage: "https://images.unsplash.com/photo-1590078627006-194655a6c57b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvb2wlMjBkcmlua3xlbnwwfHwwfHx8MA%3D%3D",
+        urlImage: "https://images.pexels.com/photos/1148215/pexels-photo-1148215.jpeg?auto=compress&cs=tinysrgb&w=600",
         price: 0.01
     }
 ]
 
 const Products = () => {
-    return <h1>Product</h1>
+    return (
+          <div className="grid">
+          {
+             products.map((product) => (
+                <Product product={product} />
+        ))
+           }
+          </div>
+    );
 }
 
 export default Products;
