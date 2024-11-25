@@ -44,7 +44,7 @@ const Products = () => {
           <div className="grid">
           {
              products.map((product) => (
-                <Product product={product} />
+                <Product key={product.id} product={product} />
         ))
            }
           </div>

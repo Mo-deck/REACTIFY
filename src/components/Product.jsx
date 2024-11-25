@@ -1,4 +1,8 @@
 const Product =({ product })=>{
+    
+    const handleAddToCart = () =>{
+
+    }
     return (
     <div className="card"
       style={{minHeight: "100%", 
@@ -13,7 +17,7 @@ const Product =({ product })=>{
             <span>{product.name}</span>
             <span>${product.price}</span>
         </div>
-        <button className="btn btn-primary">+</button>
+        <button className="btn btn-primary" onClick={handleAddToCart}>+</button>
     </div>    
     )
 }
