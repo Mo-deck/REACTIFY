@@ -1,5 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
 import shopReducer, {initialState} from "./shopReducer"
+import { type } from "@testing-library/user-event/dist/type";
 
 const ShopContext = createContext(initialState);
 
@@ -17,10 +18,21 @@ export const ShopProvider = ( {children} ) => {
         })
     }
 
+    const removeFromCart = (product)=>{
+        const updateProduct = state.products.filter(p => p.id !== product.id)
+        dispatch({
+            type: "REMOVE_FROM_CART",
+            payload: {
+                products: updateProduct
+            }
+        });
+    }
+
     const values = {
         products: state.products,
         total:state.total,
-        addToCart
+        addToCart,
+        removeFromCart
     }
 
     return <ShopContext.Provider value={values}>

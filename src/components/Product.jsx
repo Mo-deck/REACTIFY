@@ -20,7 +20,9 @@ const Product =({ product })=>{
             <span>{product.name}</span>
             <span>${product.price}</span>
         </div>
-        <button className="btn btn-primary" onClick={handleAddToCart}>+</button>
+        <button className="btn btn-primary" onClick={handleAddToCart}>
+            +
+        </button>
     </div>    
     )
 }
