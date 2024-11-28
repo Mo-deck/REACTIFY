@@ -1,7 +1,10 @@
+import useShop from "../ShopContext"
+
 const Product =({ product })=>{
+    const { addToCart, products, total} = useShop();
     
     const handleAddToCart = () =>{
-
+    addToCart(product)
     }
     return (
     <div className="card"

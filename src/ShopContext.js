@@ -7,7 +7,7 @@ export const ShopProvider = ( {children} ) => {
     const[state,dispatch] = useReducer(shopReducer, initialState)
 
     const addToCart = (product) => {
-        const updateProduct = state.products.cocat(product)
+        const updateProduct = state.products.concat(product)
         
         dispatch({
             type:"ADD_TO_CART",
