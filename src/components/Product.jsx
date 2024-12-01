@@ -1,22 +1,31 @@
 import useShop from "../ShopContext"
 import { useEffect, useState } from "react";
-import Products from "./Products";
 const Product =({ product })=>{
-    const { addToCart, removeFromCart} = useShop();
-    const [isInCart, setIsInCart] =  useState (true);
+    const { addToCart, removeFromCart, products} = useShop();
+    const [isInCart, setIsInCart] =  useState (false);
+
+
 
     useEffect(() =>{
-        const isCart = Products.filter(pro => pro.id == product.id);
-        console.log(isCart);
-        
-    }, [Products])
+        const isCart = products.filter(pro => pro.id == product.id);
+
+        if(isCart.length > 0){
+            setIsInCart(true)
+        }else{
+            setIsInCart(false)
+        }
+
+    }, [products])   
 
     
     const handleAddToCart = () =>{
         if(isInCart){
             removeFromCart(product);
+
         }else{
             addToCart(product)
+
+            
         }
     }
     return (
