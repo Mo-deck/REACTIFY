@@ -96,3 +96,7 @@ a{
     margin-top: 10px;
     cursor: pointer;
 }
+
+.btn-secondary{
+    background-color:rgb(224, 88,64) ;
+}
