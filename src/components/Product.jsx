@@ -1,8 +1,15 @@
 import useShop from "../ShopContext"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Products from "./Products";
 const Product =({ product })=>{
     const { addToCart, removeFromCart} = useShop();
     const [isInCart, setIsInCart] =  useState (true);
+
+    useEffect(() =>{
+        const isCart = Products.filter(pro => pro.id == product.id);
+        console.log(isCart);
+        
+    }, [Products])
 
     
     const handleAddToCart = () =>{
@@ -11,9 +18,6 @@ const Product =({ product })=>{
         }else{
             addToCart(product)
         }
-
-        console.log(product);
-        
     }
     return (
     <div className="card"
