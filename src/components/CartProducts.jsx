@@ -16,9 +16,9 @@ const CartProducts = ()=>{
                         <span>{Product.name}</span>
                     </div>
                     <h5>${Product.price}</h5>
-                    <button className="delete" onClick={() => removeFromCart(Product)}>
+                    <span className="delete" onClick={() => removeFromCart(Product)}>
                         Delete
-                    </button>
+                    </span>
                 </div>
             ))}
             <div className="total-price">
