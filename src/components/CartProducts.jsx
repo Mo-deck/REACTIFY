@@ -1,4 +1,5 @@
 import Product from "./Product"
+import useShop from "../ShopContext"
 
 const CartProducts = ()=>{
     const {products, removeFromCart, total} = useShop()
@@ -11,10 +12,10 @@ const CartProducts = ()=>{
             products.map((Product) =>(
                 <div className="cart-product">
                     <div className="cart-title-img">
-                        <img src={products.urlImage} alt="" />
-                        <span>{products.name}</span>
+                        <img src={Product.urlImage} alt="" />
+                        <span>{Product.name}</span>
                     </div>
-                    <h5>${products.price}</h5>
+                    <h5>${Product.price}</h5>
                     <button className="delete" onClick={() => removeFromCart(Product)}>
                         Delete
                     </button>
