@@ -16,6 +16,11 @@ const shopReducer = (state, action) => {
             return {
                 ...state,
                 products: payload.products,
+            };
+            case "CALCULATE_TOTAL_PRICE" :
+            return{
+                ...state,
+                total: payload,
             }
             default:
                 throw new Error("unknown reduceer")
